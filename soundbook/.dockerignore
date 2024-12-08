@@ -1,0 +1,35 @@
+# Node modules and log files
+node_modules
+npm-debug.log
+yarn-error.log
+logs
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS and editor-specific files
+.DS_Store
+Thumbs.db
+
+# Docker-related files
+.dockerignore
+Dockerfile
+
+# Git and version control
+.git
+.gitignore
+
+# Build and cache directories (for frontend projects)
+dist
+build
+.cache
+
+# Temporary files and IDE-specific files
+*.swp
+*.tmp
+.vscode
+.idea
+*.bak
+*.swp

@@ -20,13 +20,13 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80
-          # resources:
-          #   requests:
-          #     memory: "1Gi" # Increased memory request
-          #     cpu: "500m"
-          #   limits:
-          #     memory: "2Gi" # Increased memory limit
-          #     cpu: "1000m"
-          # env:
-          #   - name: NODE_OPTIONS
-          #     value: "--max-old-space-size=2048" # Increase Node.js memory limit to 2GB
+          resources:
+            requests:
+              memory: "1Gi" # Increased memory request
+              cpu: "500m"
+            limits:
+              memory: "2Gi" # Increased memory limit
+              cpu: "1000m"
+          env:
+            - name: NODE_OPTIONS
+              value: "--max-old-space-size=2048" # Increase Node.js memory limit to 2GB

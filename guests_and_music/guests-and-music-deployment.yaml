@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui
+  template:
+    metadata:
+      labels:
+        app: guestbook-ui
+    spec:
+      containers:
+        - name: guestbook-ui
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          ports:
+            - containerPort: 80
+        - name: soundbook
+          image: akin11235/soundbook:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "1Gi" # Increased memory request
+              cpu: "500m"
+            limits:
+              memory: "2Gi" # Increased memory limit
+              cpu: "1000m"
+          env:
+            - name: NODE_OPTIONS
+              value: "--max-old-space-size=2048" # Increase Node.js memory limit to 2GB

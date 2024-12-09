@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: guestbook
 spec:
-  project: default # Add this line
+  project: default
   source:
     repoURL: https://github.com/akin11235/pro_690_argo_project.git
     path: guestbook

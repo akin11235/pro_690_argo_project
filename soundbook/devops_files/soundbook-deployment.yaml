@@ -5,7 +5,7 @@ metadata:
   labels:
     app: soundbook
 spec:
-  replicas: 1 # Set the number of replicas for scaling
+  replicas: 2 # Set the number of replicas for scaling
   selector:
     matchLabels:
       app: soundbook

@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 80
       targetPort: 4200
-      nodePort: 30001 # Ensure this is within the range 30000-32767
+      nodePort: 30002 # Ensure this is within the range 30000-32767
